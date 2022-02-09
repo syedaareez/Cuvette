@@ -1,0 +1,119 @@
+body{
+    margin:0;
+    font-family:"Arial",sans-serif;
+}
+
+.navbar{
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+.content{
+    display:flex;
+}
+
+.left{
+    padding:110px;
+    width:35%;
+    height:100%;
+    margin:auto;
+    background-color:rgba(158, 159, 163, 0.1);
+}
+
+.right{
+    padding-right:100px;
+    padding-left:100px;
+    width:35%;
+    margin:auto;
+}
+.theForm{
+    height:300px;
+    width:425px;
+    padding:35px;
+    margin:auto;
+    border:1px solid rgba(0,0,0,0.3);
+    border-radius:15px;
+}
+
+.head{
+    margin-left:15px;
+}
+
+.theForm input{
+    width:90%;
+    padding:11px;
+    font-size:16px;
+    margin-top:15px;
+    margin-bottom:15px;
+    border:2px solid rgba(0, 0, 0, 0.1);
+    border-radius:7px;
+    outline:none;
+}
+#formbtn{
+    margin-top:25px;
+    margin-bottom:5px;
+    width:96%;
+    color:white;
+    padding:10px;
+    background-color:rgb(23, 7, 74);
+}
+
+.theForm form{
+    text-align:center;
+}
+
+#logoutbtn{
+    float:right;
+    margin-right:40px;
+    font-size:16px;
+    padding:10px;
+    width:100px;
+    border-radius:7px;
+    position:absolute;
+    top:10px;
+    right:15px;
+    color:white;
+    background-color:rgb(23, 7, 74);
+    
+}
+
+#logo{
+    height:60px;
+    width:100px;
+    margin-left:20px;
+}
+
+.foruser{
+    width:70px;
+    height:70px;
+    background-color:white;
+    padding:5px;
+    border-radius:150px;
+}
+#newuser{
+    height:60px;
+    width:60px;
+}
+
+#error{
+    color:red;
+}
+
+.left h2{
+    font-size:45px;
+}
+
+.left p{
+    font-size:25px;
+}
+
+.DashContent{
+    height:580px;
+    width:100%;
+    text-align:center;
+    background-color:rgba(158, 159, 163, 0.1);
+}
+
+.DashContent div{
+    margin-top:260px;
+    font-size:23px;
+}

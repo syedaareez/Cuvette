@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    
+    <body>
+        
+        <!--         Navbar -->
+        
+        
+        <div class="navbar">
+            <img id="logo" src="{% static 'images/logo.png' %}">
+            
+            {% if user.is_authenticated %}
+            
+                <form method="POST" action="/logout/">
+                    {% csrf_token %}
+                    <input id="logoutbtn" type="submit" value="Logout">
+                </form>
+            
+            {% endif %}
+        </div>
+        
+        
+        <!--         Content -->
+        
+        <div class="content">
+            
+            {% block content %}
+            
+            <div class="left">
+                <div class="foruser">
+                <img id="newuser" src="{% static 'images/newuser.png'%}" >
+                </div>
+                <h2>Welcome to your Dashboard</h2>
+                <p>Your uploaded APIs will be <br>displayed here once you login to your <br>account<p>
+            </div>
+            
+            <div class="right">
+                <div class="theForm">
+                <h2 class="head">Login to your account</h2>
+                <form method="POST" action='{% url "basic_app:login" %}'>
+                    {% csrf_token %}
+                    <input id="field1" type="text" name="email" placeholder="Email address">
+                    <input id="field2" type="password" name="password" placeholder="Password">
+                    <input id="formbtn" type="submit" value="Login / Signup">
+                    
+                    {% if error %}
+                        <p id="error">Enter valid credentials!</p>
+                    {% endif %}
+                    
+                </form>
+                    
+                    
+                    
+                </div>
+            
+            </div>
+            
+            {% endblock %}
+        </div>
+    </body>
+</html>

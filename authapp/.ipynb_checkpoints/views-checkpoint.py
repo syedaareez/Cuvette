@@ -26,15 +26,15 @@ def loginUser(request):
             return HttpResponseRedirect("/dashboard/")
         else:
             error=True
-            return render(request,'index.html',{'error':error})
+            return render(request,'Index.html',{'error':error})
 
-    return render(request,'index.html')
+    return render(request,'Index.html')
     
 def logoutUser(request):
     if(request.user):
         logout(request)
-        return HttpResponseRedirect("/index/")
-    return render(request,'index.html')
+        return HttpResponseRedirect("/")
+    return render(request,'Index.html')
 
 @login_required
 def Dashboard(request):
